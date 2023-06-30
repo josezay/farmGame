@@ -13,6 +13,9 @@ public class AndroidLauncher extends AndroidApplication {
         super.onCreate(savedInstanceState);
         AndroidApplicationConfiguration configuration = new AndroidApplicationConfiguration();
         configuration.useImmersiveMode = true; // Recommended, but not required.
+        configuration.useAccelerometer = false;
+        configuration.useCompass = false;
+        configuration.useGyroscope = false;
         initialize(new Core(), configuration);
     }
 }
