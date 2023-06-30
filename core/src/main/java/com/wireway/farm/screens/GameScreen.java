@@ -1,12 +1,24 @@
 package com.wireway.farm.screens;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
+import com.badlogic.gdx.utils.viewport.Viewport;
+import com.wireway.farm.Core;
 
-/** First screen of the application. Displayed after the application is created. */
 public class GameScreen implements Screen {
+    OrthographicCamera camera;
+    Viewport viewport;
+    float ratio;
+
     @Override
     public void show() {
-        // Prepare your screen here.
+        camera = new OrthographicCamera();
+        ratio = (float) Gdx.graphics.getHeight() / (float) Gdx.graphics.getWidth();
+        viewport = new ExtendViewport(Core.getGlobals().worldWidht, ratio * Core.getGlobals().worldWidht, camera);
+        viewport.update(Gdx.app.getGraphics().getWidth(), Gdx.app.getGraphics().getHeight());
+        viewport.apply(true);
     }
 
     @Override
