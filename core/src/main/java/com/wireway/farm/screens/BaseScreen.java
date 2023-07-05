@@ -1,19 +1,26 @@
 package com.wireway.farm.screens;
 
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.wireway.farm.engine.Graphics;
 
 public class BaseScreen implements Screen {
     protected Viewport viewport;
+    protected Stage stage;
 
     @Override
     public void show() {
         initializeScreen();
+        initializeScene2D();
     }
 
     private void initializeScreen() {
         viewport = Graphics.createExtendViewport();
+    }
+
+    private void initializeScene2D() {
+        stage = new Stage(viewport);
     }
 
     @Override
