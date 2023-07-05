@@ -1,24 +1,19 @@
 package com.wireway.farm.screens;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.wireway.farm.Core;
+import com.wireway.farm.engine.Graphics;
 
 public class GameScreen implements Screen {
-    OrthographicCamera camera;
     Viewport viewport;
-    float ratio;
 
     @Override
     public void show() {
-        camera = new OrthographicCamera();
-        ratio = (float) Gdx.graphics.getHeight() / (float) Gdx.graphics.getWidth();
-        viewport = new ExtendViewport(Core.getGlobals().worldWidht, ratio * Core.getGlobals().worldWidht, camera);
-        viewport.update(Gdx.app.getGraphics().getWidth(), Gdx.app.getGraphics().getHeight());
-        viewport.apply(true);
+        initializeScreen();
+    }
+
+    private void initializeScreen() {
+        viewport = Graphics.createExtendViewport();
     }
 
     @Override
@@ -48,6 +43,6 @@ public class GameScreen implements Screen {
 
     @Override
     public void dispose() {
-        // Destroy screen's assets here.
+
     }
 }
