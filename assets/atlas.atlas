@@ -1,13 +1,13 @@
 
 atlas.png
-size: 32, 32
+size: 256, 32
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
 duck
   rotate: false
   xy: 2, 2
-  size: 17, 17
-  orig: 17, 17
+  size: 128, 16
+  orig: 128, 16
   offset: 0, 0
   index: -1
