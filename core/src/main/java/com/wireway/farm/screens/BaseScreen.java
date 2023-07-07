@@ -26,7 +26,7 @@ public class BaseScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        ScreenUtils.clear(0.8901f, 0.8901f, 0.8901f, 1);
+        ScreenUtils.clear(0.2549f, 0.6823f, 0.6f, 1);
     }
 
     @Override
