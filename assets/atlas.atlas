@@ -4,7 +4,7 @@ size: 256, 32
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-duck
+duck_idle
   rotate: false
   xy: 2, 2
   size: 128, 16
