@@ -1,4 +1,4 @@
-package com.wireway.farm;
+package com.wireway.farm.globals;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;

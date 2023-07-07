@@ -2,6 +2,7 @@ package com.wireway.farm;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.wireway.farm.globals.Globals;
 import com.wireway.farm.screens.SplashScreen;
 
 public class Core extends Game {
