@@ -2,23 +2,17 @@ package com.wireway.farm.globals;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.utils.Disposable;
 
-public class Globals {
-    public final int worldWidht = 300; // The world height changes accordingly to the device screen ratio on the extend viewport.
+public class Globals implements Disposable {
+    public final int worldWidht = 190; // The world height changes accordingly to the device screen ratio on the extend viewport.
     public float elapsedAppTime;
     public Game game;
-    public AssetManager assetManager;
+    public Assets assets;
 
     public Globals(Game game) {
         this.game = game;
-        loadAssets();
-    }
-
-    private void loadAssets() {
-        assetManager = new AssetManager();
-        assetManager.load("atlas.atlas", TextureAtlas.class);
+        assets = new Assets();
     }
 
     public void update() {
@@ -26,6 +20,6 @@ public class Globals {
     }
 
     public void dispose() {
-        assetManager.dispose();
+        assets.dispose();
     }
 }

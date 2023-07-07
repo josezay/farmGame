@@ -24,7 +24,7 @@ public class SplashScreen extends BaseScreen {
     @Override
     public void render(float delta) {
         super.render(delta);
-        if (!Core.getGlobals().assetManager.update() || Core.getGlobals().elapsedAppTime < 2) {
+        if (!Core.getGlobals().assets.assetManager.update() || Core.getGlobals().elapsedAppTime < 2) {
             batch.setProjectionMatrix(viewport.getCamera().combined);
             batch.begin();
                 batch.draw(logo, viewport.getWorldWidth() / 2 - (float) logo.getWidth() / 2, viewport.getWorldHeight() / 2 - (float) logo.getHeight() / 2);
