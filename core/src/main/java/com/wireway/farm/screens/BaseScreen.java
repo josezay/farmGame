@@ -2,6 +2,7 @@ package com.wireway.farm.screens;
 
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.wireway.farm.engine.Graphics;
 
@@ -25,7 +26,7 @@ public class BaseScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        // Draw your screen here. "delta" is the time since last render in seconds.
+        ScreenUtils.clear(0.8901f, 0.8901f, 0.8901f, 1);
     }
 
     @Override
