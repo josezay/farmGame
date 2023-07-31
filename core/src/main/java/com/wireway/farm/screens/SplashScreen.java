@@ -7,9 +7,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.wireway.farm.Core;
 
 public class SplashScreen extends BaseScreen {
-    Texture logo;
-    SpriteBatch batch;
-    Music startSound;
+    private Texture logo;
+    private SpriteBatch batch;
+    private Music startSound;
 
     @Override
     public void show() {

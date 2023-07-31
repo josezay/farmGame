@@ -13,16 +13,16 @@ public class Graphics {
         return viewport;
     }
 
-    public static int getMinWorldWidth() {
+    private static int getMinWorldWidth() {
         return Core.getGlobals().worldWidht;
     }
 
-    public static int getMinWorldHeight() {
+    private static int getMinWorldHeight() {
         float ratio = getScreenRatio();
         return (int) ratio * Core.getGlobals().worldWidht;
     }
 
-    public static float getScreenRatio() {
+    private static float getScreenRatio() {
         return (float) Gdx.graphics.getHeight() / (float) Gdx.graphics.getWidth();
     }
 }

@@ -6,7 +6,7 @@ import com.wireway.farm.globals.Globals;
 import com.wireway.farm.screens.SplashScreen;
 
 public class Core extends Game {
-    Globals globals;
+    private Globals globals;
     @Override
     public void create() {
         globals = new Globals(this);

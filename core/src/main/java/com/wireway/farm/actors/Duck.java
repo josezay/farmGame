@@ -7,7 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.wireway.farm.Core;
 
 public class Duck extends Actor {
-    Animation<TextureRegion> idleLeft;
+    private final Animation<TextureRegion> idleLeft;
 
     public Duck() {
         idleLeft = Core.getGlobals().assets.getAnimation("duck_idle");
@@ -18,7 +18,7 @@ public class Duck extends Actor {
         batch.draw(getTextureRegion(), getX(), getY());
     }
 
-    public TextureRegion getTextureRegion () {
+    private TextureRegion getTextureRegion () {
         return idleLeft.getKeyFrame(Core.getGlobals().elapsedAppTime, true);
     }
 }

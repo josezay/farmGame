@@ -6,7 +6,7 @@ import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.wireway.farm.engine.Graphics;
 
-public class BaseScreen implements Screen {
+public abstract class BaseScreen implements Screen {
     protected Viewport viewport;
     protected Stage stage;
 
